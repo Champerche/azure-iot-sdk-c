@@ -189,6 +189,8 @@ jobs:
   - script: |
       export OPENSSL_ia32cap=0x00000000
       sudo chmod -R 755 .
+      sudo curl -sL https://deb.nodesource.com/13.x | bash -
+      sudo apt-get install -y nodejs
       sudo -E ./jenkins/ubuntu_clang.sh
     displayName: 'build'
     env:
@@ -220,6 +222,8 @@ jobs:
   - script: |
       export OPENSSL_ia32cap=0x00000000
       sudo chmod -R 755 .
+      sudo curl -sL https://deb.nodesource.com/13.x | bash -
+      sudo apt-get install -y nodejs
       sudo -E ./jenkins/ubuntu1604_c.sh
     displayName: 'build'
     env:
@@ -311,6 +315,8 @@ jobs:
   - script: |
       LD_LIBRARY_PATH=/usr/local/lib
       LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/my_library/
+      sudo curl -sL https://deb.nodesource.com/13.x | bash -
+      sudo apt-get install -y nodejs
       sudo -E jenkins/linux_wolfssl.sh
     displayName: 'build'
     env:
@@ -342,6 +348,8 @@ jobs:
   - script: |
       LD_LIBRARY_PATH=/usr/local/lib
       LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/my_library/
+      sudo curl -sL https://deb.nodesource.com/13.x | bash -
+      sudo apt-get install -y nodejs
       sudo -E bash jenkins/linux_bearssl.sh
     displayName: 'build'
     env:
@@ -443,6 +451,8 @@ jobs:
   displayName: 'cares'
   steps:
   - script: |
+      sudo curl -sL https://deb.nodesource.com/13.x | bash -
+      sudo apt-get install -y nodejs
       sudo -E bash jenkins/linux_cares.sh
     displayName: 'build'
     env:

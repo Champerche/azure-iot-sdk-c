@@ -8,6 +8,8 @@ set -e
 cat /etc/*release | grep VERSION*
 gcc --version
 curl --version
+node -v
+npm -v
 
 build_root=$(cd "$(dirname "$0")/.." && pwd)
 cd $build_root

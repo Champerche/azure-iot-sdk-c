@@ -7,6 +7,8 @@ cat /etc/*release | grep VERSION*
 gcc --version
 openssl version
 curl --version
+node -
+npm -v
 
 build_root=$(cd "$(dirname "$0")/.." && pwd)
 cd $build_root

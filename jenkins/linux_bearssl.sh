@@ -8,6 +8,8 @@ set -e
 cat /etc/*release | grep VERSION*
 gcc --version
 curl --version
+node -v
+npm -v
 
 # Set the default cores
 CORES=$(grep -c ^processor /proc/cpuinfo 2>/dev/null || sysctl -n hw.ncpu)
